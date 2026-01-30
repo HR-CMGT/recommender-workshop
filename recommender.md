@@ -195,12 +195,14 @@ const myScores = [7, 4, 3, 8, 7, 3, 5, 4]
 const results = await index.query({
   vector: myScores,
   topK: 3,
-  includeMetadata: true
+  includeMetadata: true,
+  includeValues: true
 })
 
 console.log('Jouw top 3 gaming buddies:')
 for (const match of results.matches) {
-  console.log(`${match.metadata.name} (score: ${match.score.toFixed(2)})`)
+  console.log(`${match.metadata.name}, Rank: ${match.score.toFixed(2)})`)
+  console.log(`Scores: ${match.values}`)
 }
 ```
 Voer de code uit met `node search.js`
@@ -219,7 +221,9 @@ Gefeliciteerd! Je hebt een AI algoritme geleerd, en een online database gebouwd 
 
 <br>
 
-Deel je project als volgt in:
+#### Project indeling
+
+Gebruik je kennis uit ***PRG6 - REST API's*** voor de volgende stappen.
 
 ```
 gaming-buddies/
@@ -232,21 +236,31 @@ gaming-buddies/
        ├── app.js
        └── style.css
 ```
-Gebruik je kennis uit ***PRG6 - REST API's*** voor de volgende stappen:
+
+
+#### Express toevoegen
+
+- Maak een `server.js` en installeer `npm install express`. 
+- Maak de `public` map zichtbaar. Nu kan je `index.html` zien op `localhost:3000`
+
+```js
+import express from 'express'
+const app = express()
+app.use(express.json())
+app.use(express.static('public'))
+app.listen(3000, () => console.log(`Server running on http://localhost:3000`))
+```
 
 #### Frontend ontwerpen
 
-- In `server.js` kan je `express` toevoegen met `npm install express`.
-- In `server.js` maak je de public map visible met `app.use(express.static('public'))`
-- Bekijk `index.html` op `localhost:3000`. Nu kan je de UI gaan ontwerpen!
 - Maak sliders voor de interesses, een submit button, en cards voor de resultaten.
 
-#### Server POST request
+#### POST request
 
 - In `server.js` maak je een `POST` request die de student data ontvangt, dit zijn 8 getallen. De route kan zijn `localhost:3000/api/search/` 
-- De server roept de `search` functie aan die in Pinecone zoekt. Het resultaat stuur je terug naar de client als `JSON`.
+- Vanuit het POST request roep je de `search` functie aan die in Pinecone zoekt. Het resultaat stuur je weer terug naar de client als `JSON`.
 
 #### Resultaat tonen
 
-- In `public/app.js` maak je een `fetch` call naar je endpoint. Daarin geef je de 8 scores mee van de sliders in de UI.
+- In `public/app.js` maak je een `fetch` call naar je `./api/search/` . Daarin geef je de 8 scores mee van de sliders in de UI.
 - De JSON die daaruit terugkomt toon je aan de gebruiker als 3 cards.
