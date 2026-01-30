@@ -1,12 +1,5 @@
 # Deel 2 - Maak je eigen recommender system
 
-- [Deel 1 - Introductie AI algoritmes](./algoritmes.md) 
-- [Deel 2 - Maak je eigen recommender system](./recommender.md) 
-- [Deel 3- Tensorflow en andere libraries](./libraries.md) 
-
-
-Inhoud Deel 2
-
 - [Wat is een recommender system](#wat-is-een-recommender-system)
 - [Een database gebruiken](#real-world-example)
 - [Bouw een UI](#bouw-een-ui)

@@ -1,9 +1,5 @@
 # Deel 1 - Introductie AI algoritmes
 
-- [Deel 1 - Introductie AI algoritmes](./algoritmes.md) 
-- [Deel 2 - Maak je eigen recommender system](./recommender.md) 
-- [Deel 3- Tensorflow en andere libraries](./libraries.md) 
-
 <br><br><br>
 
 ## Predictive, Generative en Agentic AI
