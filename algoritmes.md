@@ -1,7 +1,25 @@
-# TLE3 Specialise Me 3 maart 
+# Deel 1 - Introductie AI algoritmes
 
-- [Verschil AI algoritmes en traditionele algoritmes](#ai-algoritmes-en-traditionele-algoritmes)
-- [Predictive, generative en agentic AI](#predictive-generative-en-agentic-ai)
+- [Deel 1 - Introductie AI algoritmes](./algoritmes.md) 
+- [Deel 2 - Maak je eigen recommender system](./recommender.md) 
+- [Deel 3- Tensorflow en andere libraries](./libraries.md) 
+
+<br><br><br>
+
+## Predictive, Generative en Agentic AI
+
+| Predictive AI | Generative AI | Agentic AI |
+|---|---|---|
+| Drukte in de trein | Text generation | Autonomous customer support |
+| Broeikas Ecosysteem | Image generation | Code debugging en testing |
+| Thuisbezorgd drukte | Code generation | Financial trading |
+| Tekst herkenning | Music generation  | Autonomous research |
+| Email spam | Video generation | IT infrastructure management |
+| House price prediction | | |
+| Credit card fraude | | |
+| Medical diagnosis | | |
+| Pose herkenning | | |
+
 
 <br><br><br>
 
@@ -31,67 +49,65 @@ let data = [
 
 model.learn(data)
 ```
-Vervolgens kan je voor elke waarde aan het model vragen wat het label moet zijn. Dit werkt voor elke waarde, niet alleen de waarden waarop het getraind is!
+
+Als je genoeg data levert, kan het model ***leren*** welke waarden "defeated" zijn en welke "alive"
+
+Vervolgens kan je nieuwe waarden voorleggen en vragen wat hiervan het label is:
 
 ```js
-label = model.classify(-5)
-// defeated!
+label = model.classify(-5) // defeated! (0.87)
 ```
-In de praktijk is deze trainingdata vaak gigantisch, waardoor het trainen lang duurt en een sterke computer vereist.
-
-### Interessante datasets voor AI training
-
-- [Iris Dataset](https://archive.ics.uci.edu/ml/datasets/iris) - bloementypes voorspellen aan de hand van een foto.
-- [MNIST](http://yann.lecun.com/exdb/mnist/) - Handgeschreven cijfers herkennen
-- [Kaggle House Prices](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) - Huisprijzen voorspellen met 79 features
-- [UCI ML Repository](https://archive.ics.uci.edu/ml/) - Honderden datasets voor diverse machine learning problemen
-- [Google Dataset Search](https://datasetsearch.research.google.com/) - Zoekmotor speciaal voor openbare datasets
-
-In dit genre zijn heel veel verschillende AI algoritmes, elk met een eigen doel:
-
-- **Decision Trees** - Eenvoudig model dat data verdeelt in ja/nee vragen
-- **K-Nearest Neighbors (KNN)** - Classificeert data op basis van dichtstbijzijnde buren
-- **Linear Regression** - Voorspelt waarden door een lijn door data te trekken
-- **Neural Networks** - Geïnspireerd op hersenen, met lagen neuronen
-- **Convolutional Neural Networks (CNN)** - Gespecialiseerd voor afbeeldingen
-- **Recurrent Neural Networks (RNN)** - Verwerkt sequentiële data zoals tekst
 
 <br><br><br>
 
 
-## Predictive, generative en agentic AI
+### Confidence 
 
-Je kan AI opdelen in 3 "klassen" :
+Een eigenschap van het doen van een voorspelling is dat die nooit 100% zeker is. Een voorspelling krijgt een *confidence* score: hoe zeker is het algoritme. Voor bovenstaand voorbeeld zou dat zijn:
 
-### Predictive AI
+| Waarde | Voorspelling | Confidence |
+|--------|--------------|------------|
+| -4 | defeated | 0.95 |
+| -3 | defeated | 0.92 |
+| -2 | defeated | 0.88 |
+| -1 | defeated | 0.75 |
+| 0 | defeated | 0.65 |
+| 1 | alive | 0.60 |
+| 2 | alive | 0.78 |
+| 3 | alive | 0.85 |
+| 4 | alive | 0.93 |
 
-Zoals hierboven beschreven, een model leert van een grote hoeveelheid data, en kan vervolgens een waarde voorspellen. 
-Er zijn heel veel verschillende AI algoritmes, en hoeven niet altijd heel groot te zijn of veel rekenkracht te kosten.
 
-- **Handschrift herkenning**: Kan tekst herkennen in een foto.
-- **Email spam detection**: Model getraind op email-kenmerken (woordfrequentie, afzenderreputatie) voorspelt "spam" of "geen spam"
-- **House price prediction**: Model getraind op kenmerken zoals vierkante meters, locatie, bouwjaar, voorspelt waarde van het huis
-- **Credit risk**: Model analyzeert inkomsten, schuldratio, kredietgeschiedenis om "goedgekeurd" of "afgewezen" te voorspellen voor een creditcard
-- **Medical diagnosis**: Model getraind op patiëntgegevens (bloeddruk, glucosewaarden) voorspelt ziektekans
-- **Gebarentaal herkenning**: Kan handposes herkennen als gebarentaal.
+> *Vraag: wanneer is een confidence hoog genoeg, en hoe zou je die kunnen verbeteren?*
 
-### Generative AI
+> *Vraag: bij het IF statement weet je altijd 100% zeker dat het klopt, dus waarom zou je een AI algoritme gebruiken?*
 
-Dit zijn vaak dezelfde modellen die getraind zijn om data te herkennen, maar nu verder uitgebreid om zelf data te genereren. Sinds de uitvinding van het `transformer` algoritme is generative AI steeds beter geworden.
 
-- **Text generation**: ChatGPT, Claude - genereert menselijke tekst op basis van een prompt
-- **Image generation**: DALL-E, Midjourney - creëert afbeeldingen uit tekstbeschrijvingen
-- **Code generation**: GitHub Copilot - genereert programmacode op basis van commentaar of context
-- **Music generation**: Jukebox, MusicLM - componeert muziek in verschillende stijlen
-- **Video generation**: Runway, Synthesia - creëert video's of animaties uit tekst of afbeeldingen
+<br><br><br>
 
-### Agentic AI
 
-Taalmodellen zijn zo goed geworden in het geven van logische antwoorden en processen, dat ze ingezet worden om ook daadwerkelijk zelf acties uit te voeren, en te evalueren of die acties goed zijn gegaan. Dit kan bijv. zijn:
+## Datasets
 
-- **Autonomous customer support**: Een AI-agent beantwoordt vragen, zoekt informatie op in databases, en neemt zelfstandig beslissingen over refunds of escalaties.
-- **Code debugging**: Een AI-agent analyzeert foutmeldingen, doorzoekt codebases, voert tests uit en implementeert fixes zelfstandig.
-- **Financial trading**: Een AI-agent monitort marktdata, analyzeert trends, plaatst orders en evalueert portfolio-performance in real-time.
-- **Autonomous research**: Een AI-agent zoekt wetenschappelijke bronnen, leest papers, extraheert relevante informatie en genereert samenattingen zonder menselijke tussenkomst.
-- **IT infrastructure management**: Een AI-agent monitort systeemgezondheidsstatus, detecteert problemen, schakelt serverinstanties in/uit en past configuraties automatisch aan.
+Een "real world" dataset is vaak veel complexer dan slechts 1 of 2 getallen. Dat maakt het lastig om er een patroon in te herkennen. Een AI algoritme kan je net zo lang *trainen* totdat het wel een patroon heeft gevonden!
 
+- [Puma Indians Dataset](https://www.kaggle.com/datasets/uciml/puma-indians-diabetes-database) - Diabetes voorspellen op basis van medische metingen
+- [House Prices](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) - Huizenprijzen voorspellen aan de hand van 79 eigenschappen van een huis
+- [MNIST](http://yann.lecun.com/exdb/mnist/) - Handgeschreven cijfers herkennen
+- [UCI Repository](https://archive.ics.uci.edu/ml/) en [Google Dataset Search](https://datasetsearch.research.google.com/) - Honderden datasets voor diverse machine learning problemen
+
+<br><br><br>
+
+
+## Algoritmes
+
+- **Cosine Similarity** - Klein en snel algoritme dat snel kan zien hoeveel twee getallenreeksen overeenkomen
+- **Decision Trees** - Eenvoudig model dat data verdeelt in ja/nee vragen
+- **K-Nearest Neighbors (KNN)** - Classificeert data op basis van dichtstbijzijnde punten
+- **Linear Regression** - Voorspelt waarden door een lijn door data te trekken
+- **Neural Networks** - Geïnspireerd op hersenen, met lagen neuronen
+- **Convolutional Neural Networks (CNN)** - Neural network voor afbeeldingen
+- **Transformer** - AI model dat een grote hoeveelheid data tegelijkertijd kan analyseren, werkt goed voor taal
+
+<br><br><br>
+
+- [Deel 2 - Maak je eigen recommender system](./recommender.md) 
