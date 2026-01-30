@@ -179,7 +179,7 @@ node upload.js
 
 4 - In je pinecone dashboard kan je zien of het uploaden geslaagd is. Om te testen kan je in het dashboard al zoeken naar related students!
 
-<img src="./pinecone.png" width="700">
+<img src="./ai/pinecone.png" width="700">
 
 <br><br><br>
 
@@ -215,7 +215,7 @@ Het voordeel van Pinecone is dat *similarity search* is ingebouwd en snel blijft
 
 Gefeliciteerd! Je hebt een AI algoritme geleerd, en een online database gebouwd om recommendations mee te doen! Wat nu nog mist is een frontend. Voeg `index.html`, `app.js` en `style.css` toe aan de `public` map. Daarin ga je het UI ontwerp maken. Hieronder zie je een voorbeeld:
 
-<img src="./matchmaker.png" width="500">
+<img src="./ai/matchmaker.png" width="500">
 
 <br>
 
@@ -232,10 +232,21 @@ gaming-buddies/
        ├── app.js
        └── style.css
 ```
+Gebruik je kennis uit ***PRG6 - REST API's*** voor de volgende stappen:
 
+#### Frontend ontwerpen
 
 - In `server.js` kan je `express` toevoegen met `npm install express`.
 - In `server.js` maak je de public map visible met `app.use(express.static('public'))`
-- Bekijk je site op `localhost:3000`. Nu kan je de UI gaan ontwerpen!
-- In `server.js` maak je een `POST` request die de student data ontvangt (8 getallen), bv `localhost:3000/api/search/` (zie ***PRG6 - REST API's***.)
+- Bekijk `index.html` op `localhost:3000`. Nu kan je de UI gaan ontwerpen!
+- Maak sliders voor de interesses, een submit button, en cards voor de resultaten.
+
+#### Server POST request
+
+- In `server.js` maak je een `POST` request die de student data ontvangt, dit zijn 8 getallen. De route kan zijn `localhost:3000/api/search/` 
+- De server roept de `search` functie aan die in Pinecone zoekt. Het resultaat stuur je terug naar de client als `JSON`.
+
+#### Resultaat tonen
+
 - In `public/app.js` maak je een `fetch` call naar je endpoint. Daarin geef je de 8 scores mee van de sliders in de UI.
+- De JSON die daaruit terugkomt toon je aan de gebruiker als 3 cards.
