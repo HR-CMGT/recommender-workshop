@@ -2,6 +2,10 @@
 
 <br><br><br>
 
+<img width="1200" alt="tle-algos" src="https://github.com/user-attachments/assets/3c7418dc-fed1-4a7e-b00f-7bb65a41e1e7" />
+
+<br><br><br>
+
 ## Predictive, Generative en Agentic AI
 
 | Predictive AI | Generative AI | Agentic AI |
