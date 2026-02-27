@@ -6,28 +6,19 @@
 
 ## Prediction
 
-<img width="350" src="./ai/druktepoppetjes.png">
+| Drukte in de trein | Data |
+|---|---|
+| <img width="200" src="./ai/drukte.png"> | • Historische reizigersdata<br>• Dag van de week<br>• Seizoen en vakantieperiodes<br>• Evenementen<br>• Weer<br>• Spitsuren<br>• Schoolkalender<br>• Publieke feestdagen<br>• Werkdagen vs. thuiswerken<br>• Treintype en route |
 
-De NS app voorspelt hoe druk je reis gaat worden. Deze voorspelling wordt gedaan door een AI algoritme dat is getraind op data. Die data kan zijn:
-
-- **Historische reizigersdata** - Aantallen passagiers per moment, dag en route van voorgaande jaren
-- **Dag van de week** - Maandag drukker dan zondag, verschillende patronen per weekdag
-- **Seizoen en vakantieperiodes** - Zomervakantie, kerstvakantie, meivakantie hebben piekbelasting
-- **Evenementen** - Concerten, voetbalwedstrijden, festivals trekken extra reizigers
-- **Weer** - Regen of mooi weer beïnvloedt aantal fietsers dat omgestapt is
-- **Spitsuren** - Ochtendspits (7-9u) en avondspits (17-19u) hebben voorspelbare pieken
-- **Schoolkalender** - Schooldagen vs. weekenden, examenseizoen
-- **Publieke feestdagen** - 5 mei, sinterklaas, nieuwjaarsdag hebben specifieke patronen
-- **Werkdagen vs. thuiswerken** - Post-COVID verschuiving in werkpatronen
-- **Treintype en route** - Intercity's naar grote steden voller dan lokale treinen
-- **Onvoorziene omstandigheden** - Treinstakingen, ongevallen, wegwerkzaamheden op parallelle routes
+| Spotify Recommendations | Data |
+|---|---|
+| <img width="200" src="./ai/spotify.png"> | • Luistergeschiedenis<br>• Favoriete nummers en artiesten<br>• Afspeelduur per nummer<br>• Overgeslagen nummers<br>• Tijdstip van afspelen<br>• Betalende gebruiker<br>• Geografische locatie<br>• Gebruikersleeftijd en geslacht<br>• Playlist context<br>• Audio features (tempo, key, energy)<br>• Seizoen en jaargetijde<br>• Sociale connecties en wat vrienden luisteren |
 
 
 <p style="margin-bottom:300px"></p>
 
-<img width="1200" alt="tle-algos" src="https://github.com/user-attachments/assets/3c7418dc-fed1-4a7e-b00f-7bb65a41e1e7" />
 
-<br><br><br>
+
 
 ## Predictive, Generative en Agentic AI
 
