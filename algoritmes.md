@@ -2,7 +2,7 @@
 
 <img width="750" src="./ai/tle-algos.png">
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 ## Prediction
 
@@ -15,7 +15,7 @@
 | <img width="200" src="./ai/spotify.png"> | • Luistergeschiedenis<br>• Favoriete nummers en artiesten<br>• Afspeelduur per nummer<br>• Overgeslagen nummers<br>• Tijdstip van afspelen<br>• Betalende gebruiker<br>• Geografische locatie<br>• Gebruikersleeftijd en geslacht<br>• Playlist context<br>• Audio features (tempo, key, energy)<br>• Seizoen en jaargetijde<br>• Sociale connecties en wat vrienden luisteren |
 
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 
 
@@ -35,7 +35,7 @@
 | Pose herkenning | | |
 
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 
 ## AI algoritmes en traditionele algoritmes
@@ -94,7 +94,7 @@ Een eigenschap van het doen van een voorspelling is dat die nooit 100% zeker is.
 > *Vraag: bij het IF statement weet je altijd 100% zeker dat het klopt, dus waarom zou je een AI algoritme gebruiken?*
 
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 
 ## Datasets
@@ -106,7 +106,7 @@ Een "real world" dataset is vaak veel complexer dan slechts 1 of 2 getallen. Dat
 - [MNIST](http://yann.lecun.com/exdb/mnist/) - Handgeschreven cijfers herkennen
 - [UCI Repository](https://archive.ics.uci.edu/ml/) en [Google Dataset Search](https://datasetsearch.research.google.com/) - Honderden datasets voor diverse machine learning problemen
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 
 ## Algoritmes

@@ -4,7 +4,7 @@
 - [Real World Example](#real-world-example)
 - [User Interface](#user-interface)
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 # Wat is een recommender system
 
@@ -34,7 +34,7 @@ In de introductie hebben we gezien dat een dataset vaak bestaat uit een label en
 | Kim     | 1   | 10  | 9        | 1      | 1      | 9      | 8         | 9          |
 | Liam    | 7   | 4   | 3        | 8      | 7      | 3      | 5         | 4          |
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 ## Algoritme
 
@@ -57,7 +57,7 @@ function cosineSimilarity(arrayA, arrayB) {
 }
 ```
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 # Recommender bouwen
 
@@ -108,7 +108,7 @@ for (const student of students) {
 
 Toon alleen de top 3 studenten met de beste match!
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 # Hidden Bias
 
@@ -121,7 +121,7 @@ Bouw een *hidden bias* in de game recommender. Dit zijn studenten die jou betale
 Bij het zoeken naar de beste matches, geef je de `user` ook een extra kolom van 10, zodat die user meer overeenkomt met de betalende studenten.
 
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 # Real World Example
 
@@ -225,7 +225,7 @@ Het voordeel van Pinecone is dat *similarity search* is ingebouwd en snel blijft
 > ⚠️ *Als je geen pinecone account kan of wil maken, dan kan je meteen doorgaan met de User Interface opdracht. Je kan de vector search gebruiken van opdracht 1 t/m 5, in plaats van pinecone*.
 
 
-<p style="margin-bottom:300px"></p>
+<br><br><br><br><br><br>
 
 # User Interface
 
