@@ -1,6 +1,29 @@
 # Deel 1 - Introductie AI algoritmes
 
-<br><br><br>
+<img width="750" src="./ai/tle-algos.png">
+
+<p style="margin-bottom:300px"></p>
+
+## Prediction
+
+<img width="350" src="./ai/druktepoppetjes.png">
+
+De NS app voorspelt hoe druk je reis gaat worden. Deze voorspelling wordt gedaan door een AI algoritme dat is getraind op data. Die data kan zijn:
+
+- **Historische reizigersdata** - Aantallen passagiers per moment, dag en route van voorgaande jaren
+- **Dag van de week** - Maandag drukker dan zondag, verschillende patronen per weekdag
+- **Seizoen en vakantieperiodes** - Zomervakantie, kerstvakantie, meivakantie hebben piekbelasting
+- **Evenementen** - Concerten, voetbalwedstrijden, festivals trekken extra reizigers
+- **Weer** - Regen of mooi weer beïnvloedt aantal fietsers dat omgestapt is
+- **Spitsuren** - Ochtendspits (7-9u) en avondspits (17-19u) hebben voorspelbare pieken
+- **Schoolkalender** - Schooldagen vs. weekenden, examenseizoen
+- **Publieke feestdagen** - 5 mei, sinterklaas, nieuwjaarsdag hebben specifieke patronen
+- **Werkdagen vs. thuiswerken** - Post-COVID verschuiving in werkpatronen
+- **Treintype en route** - Intercity's naar grote steden voller dan lokale treinen
+- **Onvoorziene omstandigheden** - Treinstakingen, ongevallen, wegwerkzaamheden op parallelle routes
+
+
+<p style="margin-bottom:300px"></p>
 
 ## Predictive, Generative en Agentic AI
 
@@ -17,7 +40,7 @@
 | Pose herkenning | | |
 
 
-<br><br><br>
+<p style="margin-bottom:300px"></p>
 
 
 ## AI algoritmes en traditionele algoritmes
@@ -54,9 +77,6 @@ Vervolgens kan je nieuwe waarden voorleggen en vragen wat hiervan het label is:
 label = model.classify(-5) // defeated! (0.87)
 ```
 
-<br><br><br>
-
-
 ### Confidence 
 
 Een eigenschap van het doen van een voorspelling is dat die nooit 100% zeker is. Een voorspelling krijgt een *confidence* score: hoe zeker is het algoritme. Voor bovenstaand voorbeeld zou dat zijn:
@@ -79,7 +99,7 @@ Een eigenschap van het doen van een voorspelling is dat die nooit 100% zeker is.
 > *Vraag: bij het IF statement weet je altijd 100% zeker dat het klopt, dus waarom zou je een AI algoritme gebruiken?*
 
 
-<br><br><br>
+<p style="margin-bottom:300px"></p>
 
 
 ## Datasets
@@ -91,7 +111,7 @@ Een "real world" dataset is vaak veel complexer dan slechts 1 of 2 getallen. Dat
 - [MNIST](http://yann.lecun.com/exdb/mnist/) - Handgeschreven cijfers herkennen
 - [UCI Repository](https://archive.ics.uci.edu/ml/) en [Google Dataset Search](https://datasetsearch.research.google.com/) - Honderden datasets voor diverse machine learning problemen
 
-<br><br><br>
+<p style="margin-bottom:300px"></p>
 
 
 ## Algoritmes
@@ -104,6 +124,6 @@ Een "real world" dataset is vaak veel complexer dan slechts 1 of 2 getallen. Dat
 - **Convolutional Neural Networks (CNN)** - Neural network voor afbeeldingen
 - **Transformer** - AI model dat een grote hoeveelheid data tegelijkertijd kan analyseren, werkt goed voor taal
 
-<br><br><br>
+<br>
 
 - [Deel 2 - Maak je eigen recommender system](./recommender.md) 
