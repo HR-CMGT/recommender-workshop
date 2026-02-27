@@ -12,7 +12,7 @@
 
 | Spotify Recommendations | Data |
 |---|---|
-| <img width="200" src="./ai/spotify.png"> | • Luistergeschiedenis<br>• Favoriete nummers en artiesten<br>• Afspeelduur per nummer<br>• Overgeslagen nummers<br>• Tijdstip van afspelen<br>• Betalende gebruiker<br>• Geografische locatie<br>• Gebruikersleeftijd en geslacht<br>• Playlist context<br>• Audio features (tempo, key, energy)<br>• Seizoen en jaargetijde<br>• Sociale connecties en wat vrienden luisteren |
+| <img width="200" src="./ai/spotify.png"> | • Luistergeschiedenis<br>• Favoriete nummers en artiesten<br>• Afspeelduur per nummer<br>• Overgeslagen nummers<br>• Tijdstip van afspelen<br>• Betalende gebruiker<br>• Geografische locatie<br>• Gebruikersleeftijd en geslacht<br>• Sponsored content<br>• Audio features (tempo, key, energy)<br>• Seizoen en jaargetijde<br>• Sociale connecties en wat vrienden luisteren |
 
 
 <br><br><br><br><br><br>

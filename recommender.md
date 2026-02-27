@@ -38,13 +38,11 @@ In de introductie hebben we gezien dat een dataset vaak bestaat uit een label en
 
 ## Algoritme
 
-<img src="./ai/cosine.webp" width="600">
+<img src="./ai/cosine.png" width="600">
 
-Het `cosine similarity` algoritme bekijkt een array van data als een *angle*. In deze afbeelding bestaat de array uit twee cijfers (`x` en `y`). Van twee arrays berekent het in hoeverre die angles dezelfde kant op wijzen. Een `similarity` van `1` betekent dat de data volledig overeenkomt, en `-1` betekent dat de data exact tegenovergesteld is. Als alle data positieve getallen bevat, dan is `0` de laagste waarde.
+Het [cosine similarity](https://alexop.dev/posts/how-to-implement-a-cosine-similarity-function-in-typescript-for-vector-comparison/#visualizing-cosine-similarity) algoritme bekijkt data als een *richting* (vector). Van twee vectoren berekent het in hoeverre die dezelfde kant op wijzen. Dit geeft een getal van `1` (helemaal gelijk) tot `0` (helemaal verschillend).
 
-> *⚠️ De array mag uit meer cijfers bestaan dan alleen `x` en `y`*
-
-#### Code
+### Code
 
 Maak een nieuw bestand `recommender.js` en plaats het Cosine Similarity algoritme er in! Dit kan je copy>pasten:
 
