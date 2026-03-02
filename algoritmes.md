@@ -1,5 +1,9 @@
 # Deel 1 - Introductie AI algoritmes
 
+<img width="750" src="./ai/complexity.png">
+
+<br><br><br><br><br><br>
+
 <img width="750" src="./ai/tle-algos.png">
 
 <br><br><br><br><br><br>
