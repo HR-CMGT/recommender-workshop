@@ -102,7 +102,7 @@ Een eigenschap van het doen van een voorspelling is dat die nooit 100% zeker is.
 Een "real world" dataset is vaak veel complexer dan slechts 1 of 2 getallen. Dat maakt het lastig om er een patroon in te herkennen. Een AI algoritme kan je net zo lang *trainen* totdat het wel een patroon heeft gevonden!
 
 - [Puma Indians Dataset](https://www.kaggle.com/datasets/uciml/puma-indians-diabetes-database) - Diabetes voorspellen op basis van medische metingen
-- [House Prices](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) - Huizenprijzen voorspellen aan de hand van 79 eigenschappen van een huis
+- [House Prices]([https://www.kaggle.com/c/house-prices-advanced-regression-techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)) - Huizenprijzen voorspellen aan de hand van 79 eigenschappen van een huis
 - [MNIST](http://yann.lecun.com/exdb/mnist/) - Handgeschreven cijfers herkennen
 - [UCI Repository](https://archive.ics.uci.edu/ml/) en [Google Dataset Search](https://datasetsearch.research.google.com/) - Honderden datasets voor diverse machine learning problemen
 
