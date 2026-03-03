@@ -19,20 +19,39 @@ Het doel van deze korte toelichting is om je een startpunt te geven met het werk
 
 De [huggingface transformers.js](https://huggingface.co/docs/transformers.js/en/index) library geeft je een [heleboel opties](https://huggingface.co/docs/transformers.js/en/index#tasks) voor het werken met *eenvoudige* AI modellen. In de meeste gevallen wordt een bestaand AI model rechtstreeks naar je browser gedownload (*en in de `cache` geplaatst*). 
 
-*🚀 Dat betekent dat je het model gratis en ongelimiteerd kan gebruiken, en dat er geen data over het internet wordt verstuurd.* Met het model kan je voorspellingen doen in de browser! 
+<br>
 
-#### Frontend HTML
+### Tekst als vector
 
-```html
-<script defer type="module" src="./app.js"></script>
+Je kan een ***taalmodel*** gebruiken om teksten om te zetten naar ***vectoren*** (een array van getallen). Nu kan je de [cosine similarity](./recommender.md) uit opdracht 1 gebruiken om te zien of hoeveel twee teksten op elkaar lijken!
+
+```sh
+npm install @huggingface/transformers
 ```
-#### Frontend Javascript
+
+```js
+import { pipeline } from '@huggingface/transformers'
+import { cosineSimilarity } from "./ai.js"
+
+const languageModel = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2')
+
+const word1 = await languageModel('cats are so cool', { pooling: 'mean', normalize: true })
+const word2 = await languageModel('i drive to work every day', { pooling: 'mean', normalize: true })
+
+console.log(word1.data) // 384 numbers
+console.log(word2.data) // 384 numbers
+
+let sim = cosineSimilarity(word1.data, word2.data)
+console.log(`Text similarity is ${sim}`)
+```
+
+<br>
+
+### Text Sentiment
 
 Herken sentiment in een tekst - is dit een positieve of negatieve review?
 
 ```js
-import { pipeline } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1';
-
 const classifier = await pipeline('sentiment-analysis');
 const results = await classifier('Wow, the teachers at CMGT are so cool 🥰!');
 
