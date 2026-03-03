@@ -117,7 +117,7 @@ De recommender van Spotify kijkt niet alleen naar jouw eigen voorkeuren, maar we
 
 ## Opdracht 5
 
-Bouw een *hidden bias* in de game recommender. Dit zijn studenten die jou betalen om vaker als game buddy aangeraden te worden. Maak een extra kolom per student waar ze een score van 10 krijgen als dit zo is. De andere studenten krijgen een score van 0. 
+Bouw een *hidden bias* in de game recommender. Dit zijn studenten die jou betalen om vaker als game buddy aangeraden te worden. Maak een extra kolom per student waar ze een score van 10 krijgen als ze jou sponsoren. De andere studenten krijgen een score van 0. 
 
 Bij het zoeken naar de beste matches, geef je de `user` ook een extra kolom van 10, zodat die user meer overeenkomt met de betalende studenten.
 
