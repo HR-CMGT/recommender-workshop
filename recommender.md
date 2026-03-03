@@ -140,7 +140,7 @@ Er zijn speciale databases om met zulke hoeveelheden vector data efficiënt te w
 
 ### Account
 
-Maak een [Pinecone](https://www.pinecone.com) account.
+Maak een [Pinecone](https://www.pinecone.io) account.
 
 - Maak een nieuwe API key en noteer die op een veilige plek *-let op, je kan de key achteraf niet meer inzien in het dashboard-*
 - Maak een *index* met de naam `gaming-buddies`
