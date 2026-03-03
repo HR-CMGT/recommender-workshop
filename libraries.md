@@ -67,6 +67,9 @@ In dit voorbeeld kan de AI herkennen wat er op een afbeelding te zien is. Je kan
 <img src="./libraries/ml5.png" width="600">
 
 <br>
+```html
+<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+```
 
 ```js
 const img = document.querySelector('img');       // existing image on the html page
