@@ -59,6 +59,8 @@ function cosineSimilarity(arrayA, arrayB) {
 
 # Recommender bouwen
 
+> ***MAAK OPDRACHT 1 T/M 5 ZELFSTANDIG***
+
 ## Opdracht 1
 
 Om te zien hoe het algoritme werkt, vergelijk je twee willekeurige arrays met elkaar. De ***Similarity*** van die twee arrays ligt altijd tussen `0` (heel verschillend) en `1` (heel erg gelijk). 
