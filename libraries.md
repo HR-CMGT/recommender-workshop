@@ -66,6 +66,15 @@ In dit voorbeeld kan de AI herkennen wat er op een afbeelding te zien is. Je kan
 
 <img src="./libraries/ml5.png" width="600">
 
+<br>
+
+```js
+const img = document.querySelector('img');       // existing image on the html page
+const classifier = await ml5.imageClassifier('MobileNet');
+const results = await classifier.classify(img);
+console.log(results);
+```
+
 <br><br><br>
 
 ## TensorFlowJS
@@ -85,8 +94,8 @@ Je kan echter wel met de basis code snel een model maken die een waarde kan voor
 #### Voeg je data toe
 ```js
 // xData zijn het aantal vierkante meters van zes studentenkamers
-const xData = [5, 10, 15, 20, 25, 30];
 // yData zijn de huurprijzen van die kamers
+const xData = [5, 10, 15, 20, 25, 30];
 const yData = [100, 200, 350, 500, 700, 1000];
 ```
 De code voor het neural network kan je copy pasten:
