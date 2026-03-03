@@ -107,7 +107,7 @@ for (const student of students) {
 
 ## Opdracht 4
 
-Toon alleen de top 3 studenten met de beste match!
+Toon alleen de top 3 studenten met de beste match. Dat kan je doen door een array van resultaten te sorteren met [Array.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
 <br><br><br><br><br><br>
 
