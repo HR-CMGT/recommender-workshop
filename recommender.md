@@ -165,6 +165,9 @@ npm install @pinecone-database/pinecone
 ### Uploaden
 
 Maak een nieuw bestand `upload.js`. Hiermee ga je de data uploaden naar pinecone. 
+Bekijk [de upload documentatie van pinecone hier](https://docs.pinecone.io/reference/api/2024-07/data-plane/upsert)
+
+> *⚠️ Let op dat er "type":"module" in je package.json staat* 
 
 > *⚠️ Let op dat de students nu ook een `id` nodig hebben!*
 
