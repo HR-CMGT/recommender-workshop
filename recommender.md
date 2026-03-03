@@ -75,6 +75,7 @@ let resultB = cosineSimilarity([4,5,1,2], [1,0,8,9])     // lage similarity
 Vergelijk nu de game voorkeuren van twee studenten met elkaar. Om dat te kunnen doen is het handig om eerst de data in javascript beschikbaar te maken:
 
 ```js
+// FPS,RPG,Strategy,Sports,Racing,Puzzle,Adventure,Simulation
 const students = [
   { name: 'Alice', scores: [9, 5, 3, 2, 6, 4, 7, 3] },
   { name: 'Ben', scores: [3, 8, 7, 1, 2, 6, 8, 5] },
@@ -117,6 +118,10 @@ De recommender van Spotify kijkt niet alleen naar jouw eigen voorkeuren, maar we
 Bouw een *hidden bias* in de game recommender. Dit zijn studenten die jou betalen om vaker als game buddy aangeraden te worden. Maak een extra kolom per student waar ze een score van 10 krijgen als dit zo is. De andere studenten krijgen een score van 0. 
 
 Bij het zoeken naar de beste matches, geef je de `user` ook een extra kolom van 10, zodat die user meer overeenkomt met de betalende studenten.
+
+<br><br><br><br><br><br>
+
+# PAUZE
 
 
 <br><br><br><br><br><br>
