@@ -171,28 +171,31 @@ Maak een nieuw bestand `upload.js`. Hiermee ga je de data uploaden naar pinecone
 ```js
 import { Pinecone } from '@pinecone-database/pinecone'
 
-const pine = new Pinecone({ apiKey: 'YOUR_PINECONE_API_KEY' })
-const index = pine.Index('gaming-buddies')
+const pine = new Pinecone({ apiKey: "your_api_key_here" })
+const indexModel = await pine.describeIndex("matchmaking")
+const index = pine.index({ host: indexModel.host })  
 
 const students = [
   { id: '1', name: 'Alice', scores: [9, 5, 3, 2, 6, 4, 7, 3] }, // id toegevoegd
-  { id: '2', name: 'Ben', scores: [3, 8, 7, 1, 2, 6, 8, 5] },
-  // ... 
+  { id: '2', name: 'Ben', scores: [3, 8, 7, 1, 2, 6, 8, 5] }, // id toegevoegd
 ]
 
-await index.upsert(
-  students.map(student => ({
+await index.upsert({
+  records: students.map(student => ({
     id: student.id,
     values: student.scores,
     metadata: { name: student.name }
   }))
-)
+})
 ```
 Voer het uit met
 
 ```sh
 node upload.js
 ```
+
+> ⚠️ *gebruik de pinecone v7 documentatie*
+
 <br>
 
 ### Search
@@ -206,21 +209,19 @@ Maak een nieuw bestand `search.js`. Hierin gaan we zoeken naar de meest geschikt
 ```js
 import { Pinecone } from '@pinecone-database/pinecone'
 
-const pine = new Pinecone({ apiKey: 'YOUR_PINECONE_API_KEY' })
-const index = pine.Index('gaming-buddies')
+const pine = new Pinecone({ apiKey: "API_KEY_HERE" })
+const indexModel = await pine.describeIndex("matchmaking")
+const index = pine.index({ host: indexModel.host })  
 
-const myScores = [7, 4, 3, 8, 7, 3, 5, 4]
 const results = await index.query({
-  vector: myScores,
+  vector: userScores,
   topK: 3,
   includeMetadata: true,
   includeValues: true
 })
 
-console.log('Jouw top 3 gaming buddies:')
 for (const match of results.matches) {
-  console.log(`${match.metadata.name}, Rank: ${match.score.toFixed(2)})`)
-  console.log(`Scores: ${match.values}`)
+  console.log(`${match.metadata.name} (score: ${match.score.toFixed(2)})`)
 }
 ```
 Voer de code uit met `node search.js`
