@@ -121,7 +121,7 @@ Bij het zoeken naar de beste matches, geef je de `user` ook een extra kolom van 
 
 <br><br><br><br><br><br>
 
-# PAUZE
+# ZELFSTANDIG WERKEN 
 
 
 <br><br><br><br><br><br>
