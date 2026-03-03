@@ -216,6 +216,7 @@ const pine = new Pinecone({ apiKey: "API_KEY_HERE" })
 const indexModel = await pine.describeIndex("matchmaking")
 const index = pine.index({ host: indexModel.host })  
 
+const userScores = [1,2,1,4,2,2,5,7] // zoek naar overeenkomsten met deze scores
 const results = await index.query({
   vector: userScores,
   topK: 3,
