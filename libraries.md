@@ -24,6 +24,7 @@ De [huggingface transformers.js](https://huggingface.co/docs/transformers.js/en/
 ### Tekst als vector
 
 Je kan een ***taalmodel*** gebruiken om teksten om te zetten naar ***vectoren*** (een array van getallen). Nu kan je de [cosine similarity](./recommender.md) uit opdracht 1 gebruiken om te zien of hoeveel twee teksten op elkaar lijken!
+Het MiniLM-L6 model is geschikt om hele zinnen te vergelijken. Als je statische vectoren voor losse woorden wil vergelijken kan je het GLOVE model gebruiken.
 
 ```sh
 npm install @huggingface/transformers
@@ -35,7 +36,7 @@ import { cosineSimilarity } from "./ai.js"
 
 const languageModel = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2')
 
-const word1 = await languageModel('cats are so cool', { pooling: 'mean', normalize: true })
+const word1 = await languageModel('cats are so cool', { pooling: 'mean', normalize: true })  //"cls" pooling may be even better for long sentences
 const word2 = await languageModel('i drive to work every day', { pooling: 'mean', normalize: true })
 
 console.log(word1.data) // 384 numbers
