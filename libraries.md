@@ -24,7 +24,7 @@ De [huggingface transformers.js](https://huggingface.co/docs/transformers.js/en/
 ### Tekst als vector
 
 Je kan een ***taalmodel*** gebruiken om teksten om te zetten naar ***vectoren*** (een array van getallen). Nu kan je de [cosine similarity](./recommender.md) uit opdracht 1 gebruiken om te zien of hoeveel twee teksten op elkaar lijken!
-Het MiniLM-L6 model is geschikt om hele zinnen te vergelijken. Als je statische vectoren voor losse woorden wil vergelijken kan je het GLOVE model gebruiken.
+Het MiniLM-L6 model is geschikt om hele zinnen te vergelijken. 
 
 ```sh
 npm install @huggingface/transformers
